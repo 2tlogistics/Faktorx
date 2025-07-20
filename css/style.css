@@ -1,0 +1,229 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Custom Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-3000 {
+    animation-delay: 3s;
+}
+
+/* Base Styles */
+body {
+    overflow-x: hidden;
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center;
+}
+
+.btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-primary border-2 border-primary font-medium py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center;
+}
+
+.btn-primary-dark {
+    @apply bg-primary-dark hover:bg-primary text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center;
+}
+
+/* Form Elements */
+.form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300;
+}
+
+.form-label {
+    @apply block text-sm font-medium mb-1 text-gray-700;
+}
+
+.filter-select {
+    @apply px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300;
+}
+
+/* Product Cards */
+.product-card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg relative;
+}
+
+.product-badge {
+    @apply absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full z-10;
+}
+
+.product-image-container {
+    @apply relative overflow-hidden;
+}
+
+.product-image {
+    @apply w-full h-64 object-cover transition-all duration-500 group-hover:scale-105;
+}
+
+.product-overlay {
+    @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+
+.quick-view-btn {
+    @apply bg-white text-primary font-medium py-2 px-4 rounded-full hover:bg-primary hover:text-white transition-all duration-300;
+}
+
+.product-details {
+    @apply p-4;
+}
+
+.product-title {
+    @apply font-semibold text-lg mb-1;
+}
+
+.product-price {
+    @apply text-primary font-bold mb-3;
+}
+
+.product-actions {
+    @apply flex justify-between items-center;
+}
+
+.add-to-cart-btn {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center;
+}
+
+/* Testimonials */
+.testimonial-slider {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.testimonial-card {
+    @apply bg-white/10 p-6 rounded-lg border border-white/20;
+}
+
+.testimonial-rating {
+    @apply text-yellow-400 mb-4;
+}
+
+.testimonial-text {
+    @apply italic mb-6;
+}
+
+.testimonial-author {
+    @apply flex items-center;
+}
+
+.testimonial-avatar {
+    @apply w-12 h-12 rounded-full object-cover mr-4;
+}
+
+/* Social Icons */
+.social-icon {
+    @apply w-10 h-10 rounded-full flex items-center justify-center text-white transition-all duration-300;
+}
+
+/* Footer Links */
+.footer-link {
+    @apply text-gray-400 hover:text-white transition-colors duration-300;
+}
+
+/* Payment Methods */
+.payment-method {
+    @apply transition-all duration-300 hover:shadow-md;
+}
+
+/* Nav Links */
+.nav-link {
+    @apply transition-colors duration-300;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    @apply border-gray-300;
+}
+
+.quantity-btn {
+    @apply hover:bg-gray-100 transition-colors duration-300;
+}
+
+.quantity-value {
+    @apply border-l border-r border-gray-300;
+}
+
+/* Size Selector */
+.size-option {
+    @apply w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md hover:border-primary transition-all duration-300;
+}
+
+.size-option.active {
+    @apply bg-primary text-white border-primary;
+}
+
+/* Color Selector */
+.color-option {
+    @apply w-8 h-8 rounded-full border-2 border-transparent hover:border-gray-300 transition-all duration-300;
+}
+
+.color-option.active {
+    @apply border-black;
+}
+
+/* Payment Method Options */
+.payment-method-option {
+    @apply block border border-gray-300 rounded-lg p-3 hover:border-primary transition-all duration-300 cursor-pointer;
+}
+
+.payment-method-option input {
+    @apply hidden;
+}
+
+.payment-method-option input:checked + .payment-method-content {
+    @apply border-primary bg-primary/5;
+}
+
+.payment-method-content {
+    @apply flex items-center p-2 border-2 border-transparent rounded transition-all duration-300;
+}
+
+.payment-method-icon {
+    @apply w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-4;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-dark;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-image {
+        @apply h-48;
+    }
+    
+    .testimonial-slider {
+        @apply grid-cols-1;
+    }
+}
