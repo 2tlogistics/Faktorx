@@ -330,8 +330,8 @@ function getProductById(id) {
             description: 'Camiseta de algodón 100% con diseño urbano exclusivo. Perfecta para cualquier ocasión casual.',
             images: [
                 'assets/products/product1.jpg',
-                'assets/products/product1-alt1.jpg',
-                'assets/products/product1-alt2.jpg'
+                'assets/products/product1-alt1.png',
+                'assets/products/product1-alt2.png'
             ]
         },
         '2': {
